@@ -113,7 +113,16 @@ function ItsDiariesStore() {
 
           <button onClick={placeOrder}>
             Place Order ✅
-          </button>
+          </button> {payment === "UPI" && (
+  <div>
+    <h4>Scan & Pay 📱</h4>
+    <img 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=yourupi@upi&pn=HerDiaries"
+      alt="UPI QR"
+    />
+    <p>UPI ID: 7400772711-2@ybl
+  </div>
+)}
         </div>
       )}
 
